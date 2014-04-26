@@ -2,7 +2,6 @@ module Snapcat
   class Requestor
     include HTTMultiParty
 
-    APP_VERSION = '6.0.0'
     SECRET = 'iEk21fuwZApXlz93750dmW22pw389dPwOk'
     STATIC_TOKEN = 'm198sOkJEn37DjqZ32lpRu76xmw288xSQ9'
     HASH_PATTERN = '0001110111101110001111010101111011010001001110011000110001000110'
@@ -19,11 +18,11 @@ module Snapcat
     def request(endpoint, data = {})
       response = self.class.post(
         "/#{endpoint}",
-        { body: merge_defaults_with(data) }
+        body: merge_defaults_with(data)
       )
 
       additional_fields = additional_fields_for(data)
-      result = Snapcat::Response.new(response, additional_fields)
+      result = Response.new(response, additional_fields)
 
       auth_token_from(result, endpoint)
       result
@@ -100,8 +99,7 @@ module Snapcat
 
       data.merge!({
         req_token: built_token(@auth_token, now),
-        timestamp: now,
-        version: APP_VERSION
+        timestamp: now
       })
     end
   end

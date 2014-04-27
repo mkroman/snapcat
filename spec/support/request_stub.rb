@@ -302,8 +302,7 @@ module RequestStub
   def default_request_hash
     {
       req_token: REQUEST_TOKEN,
-      timestamp: NOW,
-      version: Snapcat::Requestor::APP_VERSION
+      timestamp: NOW
     }
   end
 

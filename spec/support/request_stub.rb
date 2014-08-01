@@ -3,7 +3,7 @@ module RequestStub
   extend self
 
   BASE_URI = Snapcat::Requestor.base_uri
-  NOW = Time.now.to_f.floor
+  NOW = 1384635477196
   REQUEST_TOKEN = '9309075617c17ae86eefa3e6fca2e344f7e04d8419456a8299b4f814d7c5126b'
 
   def stub_all

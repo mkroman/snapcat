@@ -30,12 +30,12 @@ module Fixture
       broadcast_hide_timer: 'broadcast_hide_timer',
       broadcast_url: 'broadcast_url',
       c: 'c',
-      id: '39894406827280519r',
+      id: '519861384740350100r',
       m: 0,
       st: 1,
-      sts: 1406840596,
+      sts: 1384740350062,
       t: 6,
-      ts: 1406840596
+      ts: 1384740350062
     }.merge(status_specific_snap_data(status))
   end
 

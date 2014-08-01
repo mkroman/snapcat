@@ -34,6 +34,12 @@ module Snapcat
       ))
     end
 
+    def get_stories
+      @requestor.request_with_username(
+        'loq/conversations'
+      )
+    end
+
     def media_for(snap_id)
       @requestor.request_media(snap_id)
     end

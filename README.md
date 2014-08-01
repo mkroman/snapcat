@@ -134,6 +134,14 @@ snapcat.send_media(data, 'catsaregreat')
 snapcat.send_media(data, %w(catsaregreat ronnie99), view_duration: 4)
 ```
 
+**Posting a Story**
+
+```ruby
+# Post a Story out to your network
+# `data` is a string which can be read directly from an mp4 or jpg
+snapcat.send_story(data, caption_text: "oh hai haz cheezburger", time: 10)
+```
+
 **Received Snaps**
 
 ```ruby

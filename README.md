@@ -189,10 +189,10 @@ processes and set it manually.
 
 ```ruby
 # Fetch token
-snapcat.client.auth_token
+snapcat.auth_token
 
 # Set token
-snapcat.client.auth_token = '1c7e8f83-1379-4694-8fa9-4cab6b73f0d4'
+snapcat.auth_token = '1c7e8f83-1379-4694-8fa9-4cab6b73f0d4'
 ```
 
 
@@ -210,10 +210,10 @@ Contributing
 Credits
 -------
 
-* [Neal Kemp](http://nealke.mp)
+* [Neal Kemp](http://nealke.mp), [Daniel Archer](http://dja.io)
 * Based on work by martinp on [pysnap](https://github.com/martinp/pysnap) and by
   djstelles on [php-snapchat](https://github.com/dstelljes/php-snapchat)
 
-Copyright &copy; 2013 Neal Kemp
+Copyright &copy; 2013 Neal Kemp, Daniel Archer
 
 Released under the MIT License, which can be found in the repository in `LICENSE.txt`.

@@ -1,0 +1,58 @@
+{
+   "bests":[
+
+   ],
+   "is_vip":false,
+   "score":0,
+   "received":0,
+   "logged":true,
+   "added_friends":[
+
+   ],
+   "requests":[
+
+   ],
+   "sent":0,
+   "story_privacy":"FRIENDS",
+   "username":"iluvkittens",
+   "snaps":[
+      {
+         "id":"119381384741764374r",
+         "sn":"teamsnapchat",
+         "t":10,
+         "ts":1384741764374,
+         "sts":1384741764374,
+         "m":0,
+         "st":1
+      }
+   ],
+   "friends":[
+      {
+         "can_see_custom_stories":true,
+         "name":"iluvkittens",
+         "display":"",
+         "type":0
+      },
+      {
+         "can_see_custom_stories":true,
+         "name":"teamsnapchat",
+         "display":"Team Snapchat",
+         "type":0
+      }
+   ],
+   "device_token":"",
+   "snap_p":1,
+   "mobile_verification_key":"MXkwMjpkwoFpc2kdUXNkZm9q",
+   "recents":[
+      "teamsnapchat"
+   ],
+   "added_friends_timestamp":0,
+   "notification_sound_setting":"OFF",
+   "snapchat_phone_number":"+17864088362",
+   "auth_token":"556563e7-362e-439d-8f20-6d3603f29b46",
+   "image_caption":false,
+   "can_view_mature_content":false,
+   "email":"meow@meow.com",
+   "should_send_text_to_verify_number":true,
+   "mobile":""
+}

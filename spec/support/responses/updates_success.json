@@ -1,0 +1,97 @@
+{
+  "bests":[
+    "ronnie99",
+    "bigdog",
+    "catsaregreat"
+  ],
+  "is_vip":false,
+  "score":390,
+  "received":267,
+  "logged":true,
+  "added_friends":[
+    {
+      "ts":1376694306700,
+      "name":"catsaregreat",
+      "display":"John Smith",
+      "type":0
+    },
+
+    {
+      "ts":1377255695593,
+      "name":"bigdog",
+      "display":"Jay Whittaker",
+      "type":0
+    },
+    {
+      "ts":1377255695593,
+      "name":"ronnie99",
+      "display":"James Edison",
+      "type":0
+    }
+  ],
+  "requests":[
+
+  ],
+  "sent":108,
+  "story_privacy":"FRIENDS",
+  "username":"iluvkittens",
+  "snaps":[
+    {
+      "id":"519861384740350100r",
+      "sn":"ronnie99",
+      "t":6,
+      "ts":1384740350062,
+      "sts":1384740350062,
+      "m":0,
+      "st":1
+    }
+  ],
+  "friends":[
+    {
+      "can_see_custom_stories":true,
+      "name":"wraymond",
+      "display":"",
+      "type":1
+    },
+    {
+      "can_see_custom_stories":true,
+      "name":"ronnie99",
+      "display":"James Edison",
+      "type":0
+    },
+    {
+      "can_see_custom_stories":true,
+      "name":"catsaregreat",
+      "display":"John Smith",
+      "type":0
+    },
+    {
+      "can_see_custom_stories":true,
+      "name":"bigdog",
+      "display":"Jay Whittaker",
+      "type":0
+    },
+    {
+      "can_see_custom_stories":true,
+      "name":"jimmytwo",
+      "display":"Jimmy Two",
+      "type":0
+    }
+  ],
+  "device_token":"",
+  "snap_p":0,
+  "mobile_verification_key":"Ljlw0TppbKa2a250dGVucsM=",
+  "recents":[
+    "iluvkittens"
+  ],
+  "added_friends_timestamp":1382364149068,
+  "notification_sound_setting":"OFF",
+  "snapchat_phone_number":"+15553334444",
+  "auth_token":"60cae630-4c19-43e1-b930-cd819ea0133l",
+  "image_caption":false,
+  "country_code":"US",
+  "can_view_mature_content":false,
+  "email":"meow@meow.com",
+  "should_send_text_to_verify_number":true,
+  "mobile":"+19992229999"
+}

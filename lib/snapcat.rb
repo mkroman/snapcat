@@ -3,7 +3,6 @@ require 'httmultiparty'
 require 'json'
 require 'openssl'
 require 'tempfile'
-require 'securerandom'
 
 require 'snapcat/client'
 require 'snapcat/crypt'

@@ -33,9 +33,9 @@ module Fixture
       id: '39894406827280519r',
       m: 0,
       st: 1,
-      sts: 1406840596.032952,
+      sts: 1406840596,
       t: 6,
-      ts: 1406840596.032952
+      ts: 1406840596
     }.merge(status_specific_snap_data(status))
   end
 

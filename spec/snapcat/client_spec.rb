@@ -177,23 +177,6 @@ describe Snapcat::Client do
     end
   end
 
-  describe '#send_story' do
-    context 'broadcast as story' do
-      it 'send a snap as a story' do
-        skip 'this works but having issues with decrypt in test'
-        ux = UserExperience.new
-        ux.login
-
-        result = ux.client.send_story(
-          DataHelper.data_for(:decrypted),
-          view_duration: Fixture::VIEW_DURATION
-        )
-
-        result.success?.must_equal true
-      end
-    end
-  end
-
   describe '#screenshot' do
     it 'records a screenshot' do
       skip 'stubbing this one is annoying'

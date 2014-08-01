@@ -4,14 +4,14 @@ module Fixture
   BIRTHDAY = '1990-01-30'
   EMAIL = 'meow@meow.com'
   FRIEND_DISPLAY_NAME = 'Henrie McKitten'
-  FRIEND_USERNAME = 'dja1o'
+  FRIEND_USERNAME = 'catsaregreat'
   FRIEND_TYPE = Snapcat::Friend::Type::CONFIRMED
-  MEDIA_ID = 'DJA1O~1406840143'
-  PASSWORD = 'password'
-  RECIPIENT = 'goeric'
-  RECIPIENTS = %w(goeric josh_archer)
-  SNAP_ID = '39894406827280519r'
-  USERNAME = 'dja1o'
+  MEDIA_ID = 'ILUVKITTENS4~1384804683'
+  PASSWORD = 'topsecret'
+  RECIPIENT = 'ronnie99'
+  RECIPIENTS = %w(ronnie99 jimbo2000)
+  SNAP_ID = '519861384740350100r'
+  USERNAME = 'iluvkittens'
   VIEW_DURATION = 6
 
   def friend_data

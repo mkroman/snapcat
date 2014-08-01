@@ -13,7 +13,7 @@ Installation
 
 Add this line to your application's `Gemfile`:
 
-    gem 'snapcat', '~> 0.2'
+    gem 'snapcat', '~> 0.5'
 
 And then execute:
 

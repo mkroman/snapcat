@@ -142,6 +142,13 @@ snapcat.send_media(data, %w(catsaregreat ronnie99), view_duration: 4)
 snapcat.send_story(data, caption_text: "oh hai haz cheezburger", time: 10)
 ```
 
+**Getting Stories**
+
+```ruby
+# Get all stories from your network, including view count, viewers (essentially anything in the friends list)
+snapcat.get_stories
+```
+
 **Received Snaps**
 
 ```ruby

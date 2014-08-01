@@ -8,7 +8,7 @@ module Snapcat
 
     attr_accessor :auth_token
 
-    base_uri 'https://feelinsonice-hrd.appspot.com/'
+    base_uri 'https://feelinsonice-hrd.appspot.com/bq'
 
     def initialize(username)
       @auth_token = STATIC_TOKEN
@@ -16,7 +16,6 @@ module Snapcat
     end
 
     def request(endpoint, data = {})
-      endpoint = "bq/#{endpoint}" if endpoint.match(/^loq/).nil?
       response = self.class.post(
         "/#{endpoint}",
         body: merge_defaults_with(data)

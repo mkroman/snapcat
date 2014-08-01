@@ -4,12 +4,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name = 'snapcat'
-  spec.version = '0.4.2'
+  spec.version = '0.4.5'
   spec.authors = ['Neal Kemp', 'Daniel Archer']
   spec.email = ['']
   spec.description = %q{Snapchat API wrapper}
   spec.summary = %q{Ruby wrapper for Snapchat's private API}
-  spec.homepage = 'https://github.com/danieljacobarcher/snapcat'
+  spec.homepage = 'https://github.com/nneal/snapcat'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 1.9.3'
 

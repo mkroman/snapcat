@@ -35,9 +35,7 @@ module Snapcat
     end
 
     def get_stories
-      @requestor.request_with_username(
-        'loq/conversations'
-      )
+      @requestor.request_with_username('stories')
     end
 
     def media_for(snap_id)
@@ -139,8 +137,7 @@ module Snapcat
     end
 
     def send_story(data, options = {})
-      result = @requestor.request_upload_story(data, options[:time], options[:caption_text], options[:type])
-      return result
+      @requestor.request_upload_story(data, options[:time], options[:caption_text], options[:type])
     end
 
     def unblock(username)

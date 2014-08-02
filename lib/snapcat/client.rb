@@ -34,6 +34,10 @@ module Snapcat
       ))
     end
 
+    def get_stories
+      @requestor.request_with_username('stories')
+    end
+
     def media_for(snap_id)
       @requestor.request_media(snap_id)
     end
@@ -130,6 +134,10 @@ module Snapcat
         recipient: prepare_recipients(recipients),
         time: options[:view_duration] || 3
       )
+    end
+
+    def send_story(data, options = {})
+      @requestor.request_upload_story(data, options[:time], options[:caption_text], options[:type])
     end
 
     def unblock(username)

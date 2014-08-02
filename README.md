@@ -13,7 +13,7 @@ Installation
 
 Add this line to your application's `Gemfile`:
 
-    gem 'snapcat', '~> 0.2'
+    gem 'snapcat', '~> 0.5'
 
 And then execute:
 
@@ -134,6 +134,21 @@ snapcat.send_media(data, 'catsaregreat')
 snapcat.send_media(data, %w(catsaregreat ronnie99), view_duration: 4)
 ```
 
+**Posting a Story**
+
+```ruby
+# Post a Story out to your network
+# `data` is a string which can be read directly from an mp4 or jpg
+snapcat.send_story(data, caption_text: "oh hai haz cheezburger", time: 10)
+```
+
+**Getting Stories**
+
+```ruby
+# Get all stories from your network, including view count, viewers (essentially anything in the friends list)
+snapcat.get_stories
+```
+
 **Received Snaps**
 
 ```ruby
@@ -189,10 +204,10 @@ processes and set it manually.
 
 ```ruby
 # Fetch token
-snapcat.client.auth_token
+snapcat.auth_token
 
 # Set token
-snapcat.client.auth_token = '1c7e8f83-1379-4694-8fa9-4cab6b73f0d4'
+snapcat.auth_token = '1c7e8f83-1379-4694-8fa9-4cab6b73f0d4'
 ```
 
 
@@ -210,10 +225,10 @@ Contributing
 Credits
 -------
 
-* [Neal Kemp](http://nealke.mp)
+* [Neal Kemp](http://nealke.mp), [Daniel Archer](http://dja.io)
 * Based on work by martinp on [pysnap](https://github.com/martinp/pysnap) and by
   djstelles on [php-snapchat](https://github.com/dstelljes/php-snapchat)
 
-Copyright &copy; 2013 Neal Kemp
+Copyright &copy; 2013 Neal Kemp, Daniel Archer
 
 Released under the MIT License, which can be found in the repository in `LICENSE.txt`.

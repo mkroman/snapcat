@@ -63,6 +63,31 @@ module Snapcat
       end
     end
 
+    def request_upload_story(data, time = nil, caption_text = nil, type = nil)
+      encrypted_data = Crypt.encrypt(data)
+      media = Media.new(encrypted_data, type)
+      file_extension = media.file_extension
+
+      begin
+        file = Tempfile.new(['story', ".#{file_extension}"])
+        file.write(encrypted_data.force_encoding('utf-8'))
+        file.rewind
+
+        return request_with_username(
+          'retry_post_story',
+          data: file,
+          media_id: media.generate_id(@username),
+          client_id: media.generate_id(@username),
+          time: time || 3,
+          caption_text_display: caption_text,
+          type: media.type_code
+        )
+      ensure
+        file.close
+        file.unlink
+      end
+    end
+
     private
 
     def additional_fields_for(data)

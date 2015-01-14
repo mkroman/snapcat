@@ -18,7 +18,12 @@ module Snapcat
     def request(endpoint, data = {})
       response = self.class.post(
         "/#{endpoint}",
-        body: merge_defaults_with(data)
+        body: merge_defaults_with(data),
+        headers: {
+          'User-Agent' => 'Snapchat/8.1.1 (iPhone; iOS 8.1.1; gzip)',
+          'Accept-Language' => 'en',
+          'Accept-Locale' => 'en'
+        }
       )
 
       additional_fields = additional_fields_for(data)

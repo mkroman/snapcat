@@ -19,11 +19,7 @@ module Snapcat
       response = self.class.post(
         "/#{endpoint}",
         body: merge_defaults_with(data),
-        headers: {
-          'User-Agent' => 'Snapchat/8.1.1 (iPhone; iOS 8.1.1; gzip)',
-          'Accept-Language' => 'en',
-          'Accept-Locale' => 'en'
-        }
+        headers: request_headers
       )
 
       additional_fields = additional_fields_for(data)
@@ -36,7 +32,8 @@ module Snapcat
     def request_media(snap_id)
       response = self.class.post(
         '/blob',
-        { body: merge_defaults_with({ id: snap_id, username: @username }) }
+        body: merge_defaults_with({ id: snap_id, username: @username }),
+        headers: request_headers
       )
 
       Response.new(response)
@@ -131,6 +128,12 @@ module Snapcat
         req_token: built_token(@auth_token, now),
         timestamp: now
       })
+    end
+
+    def request_headers
+      {'User-Agent' => 'Snapchat/8.1.1 (iPhone; iOS 8.1.1; gzip)',
+       'Accept-Language' => 'en',
+       'Accept-Locale' => 'en'}
     end
   end
 end

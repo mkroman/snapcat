@@ -3,6 +3,7 @@ module Snapcat
     extend self
 
     CIPHER = 'AES-128-ECB'
+    STORY_CIPHER = 'AES-256-CBC'
     ENCRYPTION_KEY = 'M02cnQ51Ji97vwT4'
 
     def decrypt(data)
@@ -15,6 +16,21 @@ module Snapcat
         decrypted_data += cipher.update(slice.map(&:chr).join)
       end
 
+      decrypted_data += cipher.final
+    end
+    
+    def decrypt_story(data, key, iv)
+      cipher = OpenSSL::Cipher.new(STORY_CIPHER)
+      cipher.decrypt
+      cipher.padding = 0
+      cipher.key = Base64.decode64(key)
+      cipher.iv = Base64.decode64(iv)
+      decrypted_data = ''
+      
+      data.bytes.each_slice(16) do |slice|
+        decrypted_data += cipher.update(slice.map(&:chr).join)
+      end
+      
       decrypted_data += cipher.final
     end
 

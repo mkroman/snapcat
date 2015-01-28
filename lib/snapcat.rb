@@ -12,6 +12,7 @@ require 'snapcat/requestor'
 require 'snapcat/response'
 require 'snapcat/snap'
 require 'snapcat/snapcat_error'
+require 'snapcat/story'
 require 'snapcat/timestamp'
 require 'snapcat/user'
 

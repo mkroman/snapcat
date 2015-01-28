@@ -35,11 +35,19 @@ module Snapcat
     end
 
     def get_stories
-      @requestor.request_with_username('stories')
+      set_user_story_data_with(@requestor.request_with_username('stories'))
     end
 
     def media_for(snap_id)
       @requestor.request_media(snap_id)
+    end
+    
+    def media_for_story(story)
+      @requestor.request_story_media(story)
+    end
+    
+    def media_for_story_thumbnail(story)
+      @requestor.request_story_media(story, 'thumbnail')
     end
 
     def delete_friend(username)
@@ -211,6 +219,14 @@ module Snapcat
         @user.data = result.data
       end
 
+      result
+    end
+    
+    def set_user_story_data_with(result)
+      if result.success?
+        @user.story_data = result.data
+      end
+      
       result
     end
   end

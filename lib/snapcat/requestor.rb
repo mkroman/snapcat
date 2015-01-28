@@ -38,6 +38,15 @@ module Snapcat
 
       Response.new(response)
     end
+    
+    def request_story_media(story, media_type = 'blob')
+      response = self.class.get(
+        "/story_#{media_type}",
+        {query: {story_id: story.media_id}}
+      )
+      
+      Response.new(response, {}, story)
+    end
 
     def request_with_username(endpoint, data = {})
       request(endpoint, data.merge({ username: @username }))

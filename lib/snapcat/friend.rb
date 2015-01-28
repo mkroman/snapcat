@@ -8,10 +8,17 @@ module Snapcat
     }
 
     attr_reader *ALLOWED_FIELD_CONVERSIONS.values
+    attr_reader :story_data, :stories
 
     def initialize(data = {})
       humanize_data(data)
       @type = Type.new(@type)
+      @stories = []
+    end
+    
+    def story_data=(data)
+      set_stories(data)
+      @story_data = data
     end
 
     private
@@ -22,6 +29,13 @@ module Snapcat
           "@#{human_field}",
           data[human_field] || data[api_field]
         )
+      end
+    end
+    
+    def set_stories(friend_stories)
+      @stories = []
+      friend_stories[:stories].each do |story|
+        stories << Story.new(story)
       end
     end
 

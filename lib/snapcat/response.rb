@@ -3,7 +3,8 @@ module Snapcat
     RECOGNIZED_CONTENT_TYPES = %w(application/json application/octet-stream)
     attr_reader :code, :data, :http_success
 
-    def initialize(response, additional_fields = {})
+    def initialize(response, additional_fields = {}, story = nil)
+      @story = story
       @data = formatted_result(response).merge(additional_fields)
       @code = response.code
       @http_success = response.success?
@@ -26,6 +27,8 @@ module Snapcat
     def format_recognized_content(content_type, content)
       if content_type.include? 'application/json'
         JSON.parse(content, symbolize_names: true)
+      elsif !@story.nil? && content_type.include?('application/octet-stream')
+        { media: Media.new(content, @story.media_type.code, @story) }
       elsif content_type.include? 'application/octet-stream'
         { media: Media.new(content) }
       end

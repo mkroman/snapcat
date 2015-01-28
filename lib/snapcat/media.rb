@@ -24,6 +24,10 @@ module Snapcat
     def type_code
       @type.code
     end
+    
+    def image?
+      @type.image?
+    end
 
     def video?
       @type.video?

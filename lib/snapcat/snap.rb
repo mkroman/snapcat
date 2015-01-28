@@ -13,7 +13,9 @@ module Snapcat
       sn: :sender,
       st: :status,
       sts: :sent,
-      ts: :opened
+      ts: :opened,
+      timer: :timer,
+      zipped: :zipped
     }
 
     attr_reader *ALLOWED_FIELD_CONVERSIONS.values
@@ -30,6 +32,10 @@ module Snapcat
 
     def sent?
       !!media_id
+    end
+    
+    def zipped?
+      @zipped
     end
 
     private

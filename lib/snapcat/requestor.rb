@@ -8,7 +8,7 @@ module Snapcat
 
     attr_accessor :auth_token
 
-    base_uri 'https://feelinsonice-hrd.appspot.com/bq/'
+    base_uri 'https://feelinsonice-hrd.appspot.com/loq/'
 
     def initialize(username)
       @auth_token = STATIC_TOKEN
